@@ -8,7 +8,7 @@ export const handleSignIn = async (
   navigate
 ) => {
   try {
-    const response = await axios.post("https://caresure-insurance-app-5.onrender.com/auth/login", {
+    const response = await axios.post("https://caresure-insurance-app-5.onrender.com/admin/login", {
       username,
       password,
     });
