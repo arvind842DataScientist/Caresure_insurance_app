@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (username, password) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/auth/user/login",
+        "https://caresure-backend.onrender.com/auth/user/login",
         {
           username,
           password,

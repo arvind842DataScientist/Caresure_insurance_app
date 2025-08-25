@@ -24,7 +24,7 @@ const ManagePlans = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/plans/getAll")
+      .get("https://caresure-insurance-app-5.onrender.com/plans/getAll")
       .then((response) => {
         setPlans(response.data);
       })
@@ -54,11 +54,11 @@ const ManagePlans = () => {
 
   const handleDelete = (planId) => {
     axios
-      .delete(`http://localhost:5000/plans/${planId}`)
+      .delete(`https://caresure-insurance-app-5.onrender.com/plans/${planId}`)
       .then(() => {
         // Refresh the plan data after deleting the plan
         axios
-          .get("http://localhost:5000/plans/getAll")
+          .get("https://caresure-insurance-app-5.onrender.com/plans/getAll")
           .then((response) => {
             setPlans(response.data);
           })

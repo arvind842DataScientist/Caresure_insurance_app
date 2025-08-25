@@ -12,7 +12,7 @@ const EditUser = ({ user, onUpdateUser, onCancelEdit }) => {
   const handleSave = () => {
     // Send a PUT request to your server's update endpoint
     axios
-      .put(`http://localhost:5000/users/${editedUser._id}`, editedUser)
+      .put(`https://caresure-insurance-app-5.onrender.com/users/${editedUser._id}`, editedUser)
       .then((response) => {
         // After a successful update, you can reflect the changes in the user list
         onUpdateUser(response.data);

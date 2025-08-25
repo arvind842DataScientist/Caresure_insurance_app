@@ -15,7 +15,7 @@ const UserList = () => {
   useEffect(() => {
     // Fetch user data
     axios
-      .get("http://localhost:5000/users/getAll")
+      .get("https://caresure-insurance-app-5.onrender.com/users/getAll")
       .then((response) => {
         setUsers(response.data);
       })
@@ -27,7 +27,7 @@ const UserList = () => {
   const handleDeleteUser = (userId) => {
     // Send a DELETE request to your server's delete endpoint
     axios
-      .delete(`http://localhost:5000/users/${userId}`)
+      .delete(`https://caresure-insurance-app-5.onrender.com/users/${userId}`)
       .then(() => {
         // After deletion, you can fetch the updated user list if needed
         const updatedUsers = users.filter((user) => user._id !== userId);

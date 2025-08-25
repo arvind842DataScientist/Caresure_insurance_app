@@ -27,7 +27,7 @@ const RegisterForm = () => {
 
   const handleRegister = () => {
     axios
-      .post("http://localhost:5000/users/create", formData)
+      .post("https://caresure-backend.onrender.com/users/create", formData)
       .then((response) => {
         console.log("User created successfully", response.data);
         window.alert("User registered successfully!");

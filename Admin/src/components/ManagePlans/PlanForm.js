@@ -28,7 +28,7 @@ const PlanForm = ({ plan, onClose, isEditMode }) => {
     if (isEditMode) {
       // Update existing plan
       axios
-        .put(`http://localhost:5000/plans/${planData.id}`, planData)
+        .put(`https://caresure-insurance-app-5.onrender.com/plans/${planData.id}`, planData)
         .then(() => {
           onClose();
         })
@@ -38,7 +38,7 @@ const PlanForm = ({ plan, onClose, isEditMode }) => {
     } else {
       // Add new plan
       axios
-        .post("http://localhost:5000/plans/create", planData)
+        .post("https://caresure-insurance-app-5.onrender.com/plans/create", planData)
         .then(() => {
           onClose();
         })
